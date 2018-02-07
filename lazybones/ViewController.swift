@@ -27,10 +27,10 @@ class ViewController: UIViewController {
 
     @IBAction func btnE4(_ sender: Any) {
         NSLog("turning to E4")
-        sendCommand()
+        sendCommand(command: "AAAAAQAAAAEAAAAAAw==")
     }
     
-    func sendCommand() {
+    func sendCommand(command:String) {
         let url = URL(string: "http://192.168.43.201/sony/IRCC")!
         var request = URLRequest(url: url)
         request.setValue("application/xml", forHTTPHeaderField: "Content-Type")
