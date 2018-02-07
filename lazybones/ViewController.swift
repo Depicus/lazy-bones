@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let wol = wakeup()
-        if (wol.wakeonlan()) {
+        if (wol.wakeonlan(macaddress: "AA-CC-BB-AA-DD-CC")) {
             NSLog("hello we are true")
         }
     }
@@ -50,16 +50,14 @@ class ViewController: UIViewController {
 
         request.httpBody = xml.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {                                                 // check for fundamental networking error
+            guard let data = data, error == nil else {
                 print("error= \(String(describing: error))")
                 return
             }
-            
-            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
+            if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {
                 print("statusCode should be 200, but is \(httpStatus.statusCode)")
                 print("response = \(String(describing: response))")
             }
-            
             let responseString = String(data: data, encoding: .utf8)
             print("responseString = \(String(describing: responseString))")
         }

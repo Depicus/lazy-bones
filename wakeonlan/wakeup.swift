@@ -10,7 +10,7 @@ import UIKit
 
 public class wakeup: NSObject {
 
-    public func wakeonlan() -> Bool {
+    public func wakeonlan(macaddress:String) -> Bool {
         return true
     }
     
