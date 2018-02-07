@@ -12,7 +12,35 @@
 		D3B3D4A8202B63CB00791D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B3D4A6202B63CB00791D59 /* Main.storyboard */; };
 		D3B3D4AA202B63CB00791D59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3B3D4A9202B63CB00791D59 /* Assets.xcassets */; };
 		D3B3D4AD202B63CB00791D59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B3D4AB202B63CB00791D59 /* LaunchScreen.storyboard */; };
+		D3B3D4BD202B655400791D59 /* wakeonlan.h in Headers */ = {isa = PBXBuildFile; fileRef = D3B3D4BB202B655400791D59 /* wakeonlan.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3B3D4C0202B655400791D59 /* wakeonlan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B3D4B9202B655400791D59 /* wakeonlan.framework */; };
+		D3B3D4C1202B655400791D59 /* wakeonlan.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D3B3D4B9202B655400791D59 /* wakeonlan.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D3B3D4C7202B6FBE00791D59 /* wakeup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3D4C6202B6FBE00791D59 /* wakeup.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D3B3D4BE202B655400791D59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3B3D497202B63CB00791D59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D3B3D4B8202B655400791D59;
+			remoteInfo = wakeonlan;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D3B3D4C5202B655400791D59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D3B3D4C1202B655400791D59 /* wakeonlan.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		D3B3D49F202B63CB00791D59 /* lazybones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lazybones.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +50,22 @@
 		D3B3D4A9202B63CB00791D59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3B3D4AC202B63CB00791D59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3B3D4AE202B63CB00791D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B3D4B9202B655400791D59 /* wakeonlan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = wakeonlan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3B3D4BB202B655400791D59 /* wakeonlan.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wakeonlan.h; sourceTree = "<group>"; };
+		D3B3D4BC202B655400791D59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B3D4C6202B6FBE00791D59 /* wakeup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wakeup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D3B3D49C202B63CB00791D59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B3D4C0202B655400791D59 /* wakeonlan.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B3D4B5202B655400791D59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B3D4A1202B63CB00791D59 /* lazybones */,
+				D3B3D4BA202B655400791D59 /* wakeonlan */,
 				D3B3D4A0202B63CB00791D59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				D3B3D49F202B63CB00791D59 /* lazybones.app */,
+				D3B3D4B9202B655400791D59 /* wakeonlan.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,7 +106,28 @@
 			path = lazybones;
 			sourceTree = "<group>";
 		};
+		D3B3D4BA202B655400791D59 /* wakeonlan */ = {
+			isa = PBXGroup;
+			children = (
+				D3B3D4BB202B655400791D59 /* wakeonlan.h */,
+				D3B3D4BC202B655400791D59 /* Info.plist */,
+				D3B3D4C6202B6FBE00791D59 /* wakeup.swift */,
+			);
+			path = wakeonlan;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D3B3D4B6202B655400791D59 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B3D4BD202B655400791D59 /* wakeonlan.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		D3B3D49E202B63CB00791D59 /* lazybones */ = {
@@ -74,15 +137,35 @@
 				D3B3D49B202B63CB00791D59 /* Sources */,
 				D3B3D49C202B63CB00791D59 /* Frameworks */,
 				D3B3D49D202B63CB00791D59 /* Resources */,
+				D3B3D4C5202B655400791D59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D3B3D4BF202B655400791D59 /* PBXTargetDependency */,
 			);
 			name = lazybones;
 			productName = lazybones;
 			productReference = D3B3D49F202B63CB00791D59 /* lazybones.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D3B3D4B8202B655400791D59 /* wakeonlan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D3B3D4C2202B655400791D59 /* Build configuration list for PBXNativeTarget "wakeonlan" */;
+			buildPhases = (
+				D3B3D4B4202B655400791D59 /* Sources */,
+				D3B3D4B5202B655400791D59 /* Frameworks */,
+				D3B3D4B6202B655400791D59 /* Headers */,
+				D3B3D4B7202B655400791D59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = wakeonlan;
+			productName = wakeonlan;
+			productReference = D3B3D4B9202B655400791D59 /* wakeonlan.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +179,11 @@
 				TargetAttributes = {
 					D3B3D49E202B63CB00791D59 = {
 						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D3B3D4B8202B655400791D59 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -114,6 +202,7 @@
 			projectRoot = "";
 			targets = (
 				D3B3D49E202B63CB00791D59 /* lazybones */,
+				D3B3D4B8202B655400791D59 /* wakeonlan */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +218,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3B3D4B7202B655400791D59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,7 +237,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D3B3D4B4202B655400791D59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3B3D4C7202B6FBE00791D59 /* wakeup.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D3B3D4BF202B655400791D59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D3B3D4B8202B655400791D59 /* wakeonlan */;
+			targetProxy = D3B3D4BE202B655400791D59 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D3B3D4A6202B63CB00791D59 /* Main.storyboard */ = {
@@ -273,6 +385,7 @@
 		D3B3D4B2202B63CB00791D59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8KV28BE94J;
@@ -281,13 +394,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.depicus.lazybones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D3B3D4B3202B63CB00791D59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8KV28BE94J;
@@ -296,7 +410,58 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.depicus.lazybones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D3B3D4C3202B655400791D59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8KV28BE94J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = wakeonlan/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.depicus.wakeonlan;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D3B3D4C4202B655400791D59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 8KV28BE94J;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = wakeonlan/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.depicus.wakeonlan;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -317,6 +482,15 @@
 			buildConfigurations = (
 				D3B3D4B2202B63CB00791D59 /* Debug */,
 				D3B3D4B3202B63CB00791D59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D3B3D4C2202B655400791D59 /* Build configuration list for PBXNativeTarget "wakeonlan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3B3D4C3202B655400791D59 /* Debug */,
+				D3B3D4C4202B655400791D59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
