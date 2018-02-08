@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let wol = wakeup()
-        if (wol.wakeonlan(macaddress: "AA-CC-BB-AA-DD-CC")) {
+        if (wol.wakeonlan(mac: "AA-CC-BB-AA-DD-CC")) {
             NSLog("hello we are true")
         }
     }
