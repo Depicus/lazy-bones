@@ -33,7 +33,7 @@ public class wakeup: NSObject {
                 print("No value at %i", x)
             }
         }
-        print("Swift Buffer is set to \(buf) and MAC is \(macaddress)")
+        //print("Swift Buffer is set to \(buf) and MAC is \(macaddress)")
         for _ in 0..<16 {
             for x in stride(from: 0, through: 10, by: 2) {
                 var dec = uint()
@@ -49,8 +49,8 @@ public class wakeup: NSObject {
                 }
             }
         }
-        print("Finally buffer is set to \(buf)")
-        print("Buffer size is \(buf.lengthOfBytes(using: .isoLatin1))")
+        //print("Finally buffer is set to \(buf)")
+        //print("Buffer size is \(buf.lengthOfBytes(using: .isoLatin1))")
         
         let INADDR_ANY = in_addr(s_addr: 0)
         let fd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)

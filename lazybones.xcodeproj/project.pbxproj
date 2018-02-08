@@ -13,6 +13,8 @@
 		D35F97EA202BB3B300779F51 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35F97E8202BB3B300779F51 /* MainInterface.storyboard */; };
 		D35F97EE202BB3B300779F51 /* siriUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D35F97E1202BB3B200779F51 /* siriUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D35F97F1202BB3B300779F51 /* siri.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D35F97D8202BB3B200779F51 /* siri.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D38DABB4202CC0E200EBDFF1 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DABB3202CC0E200EBDFF1 /* Commands.swift */; };
+		D38DABB6202CC64800EBDFF1 /* commands.json in Resources */ = {isa = PBXBuildFile; fileRef = D38DABB5202CC64800EBDFF1 /* commands.json */; };
 		D3B3D4A3202B63CB00791D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */; };
 		D3B3D4A5202B63CB00791D59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3D4A4202B63CB00791D59 /* ViewController.swift */; };
 		D3B3D4A8202B63CB00791D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B3D4A6202B63CB00791D59 /* Main.storyboard */; };
@@ -83,6 +85,8 @@
 		D35F97E6202BB3B300779F51 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		D35F97E9202BB3B300779F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D35F97EB202BB3B300779F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D38DABB3202CC0E200EBDFF1 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
+		D38DABB5202CC64800EBDFF1 /* commands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = commands.json; sourceTree = "<group>"; };
 		D3B3D49F202B63CB00791D59 /* lazybones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lazybones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3B3D4A4202B63CB00791D59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -185,10 +189,12 @@
 			children = (
 				D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */,
 				D3B3D4A4202B63CB00791D59 /* ViewController.swift */,
+				D38DABB3202CC0E200EBDFF1 /* Commands.swift */,
 				D3B3D4A6202B63CB00791D59 /* Main.storyboard */,
 				D3B3D4A9202B63CB00791D59 /* Assets.xcassets */,
 				D3B3D4AB202B63CB00791D59 /* LaunchScreen.storyboard */,
 				D3B3D4AE202B63CB00791D59 /* Info.plist */,
+				D38DABB5202CC64800EBDFF1 /* commands.json */,
 			);
 			path = lazybones;
 			sourceTree = "<group>";
@@ -364,6 +370,7 @@
 				D3B3D4AD202B63CB00791D59 /* LaunchScreen.storyboard in Resources */,
 				D3B3D4AA202B63CB00791D59 /* Assets.xcassets in Resources */,
 				D3B3D4A8202B63CB00791D59 /* Main.storyboard in Resources */,
+				D38DABB6202CC64800EBDFF1 /* commands.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B3D4A5202B63CB00791D59 /* ViewController.swift in Sources */,
+				D38DABB4202CC0E200EBDFF1 /* Commands.swift in Sources */,
 				D3B3D4A3202B63CB00791D59 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
