@@ -9,20 +9,28 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>siri.xcscheme</key>
+		<key>wakeonlan.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>siriUI.xcscheme</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D35F97D7202BB3B200779F51</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>primary</key>
+			<true/>
 		</dict>
-		<key>wakeonlan.xcscheme</key>
+		<key>D35F97E0202BB3B200779F51</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3B3D49E202B63CB00791D59</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

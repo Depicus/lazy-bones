@@ -28,21 +28,27 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func btnE4(_ sender: Any) {
-        NSLog("tuning to E4")
-        sendCommand(command: command.two)
-        sendCommand(command: command.five)
+    @IBAction func btnPower(_ sender: UIButton) {
+        sendCommand(command: "AAAAAQAAAAEAAAAVAw==")
     }
     
-    @IBAction func btnFilm4(_ sender: Any) {
-        sendCommand(command: command.two)
-        sendCommand(command: command.nine)
+
+    @IBAction func btnMute(_ sender: UIButton) {
+        sendCommand(command: "AAAAAQAAAAEAAAAUAw==")
+    }
+    @IBAction func btnVolumeUp(_ sender: UIButton) {
+        sendCommand(command: "AAAAAQAAAAEAAAASAw==")
+    }
+    @IBAction func btnVolumeDown(_ sender: UIButton) {
+        sendCommand(command: "AAAAAQAAAAEAAAATAw==")
+    }
+    @IBAction func btnTV(_ sender: UIButton) {
+        sendCommand(command: "AAAAAQAAAAEAAAAkAw==")
     }
     
     @IBAction func btnAction(_ sender: UIButton) {
         print(sender.tag)
         var arrayofcommands = [command.zero, command.one, command.two, command.three, command.four, command.five, command.six, command.seven, command.eight, command.nine]
-
         let channel = String(sender.tag)
         let numberarray = channel.flatMap{Int(String($0))}
         for item in numberarray {
@@ -68,7 +74,6 @@ class ViewController: UIViewController {
         xml += "</u:X_SendIRCC>"
         xml += "</s:Body>"
         xml += "</s:Envelope>"
-
         request.httpBody = xml.data(using: .utf8)
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
