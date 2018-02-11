@@ -54,6 +54,7 @@ class ViewController: UIViewController {
         for item in numberarray {
             print("Found \(item) arrayofcommands would be \(arrayofcommands[item])")
             sendCommand(command: arrayofcommands[item])
+            usleep(20000) //will sleep for .02 seconds
         }
     }
     

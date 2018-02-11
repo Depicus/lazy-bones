@@ -47,7 +47,6 @@
 /* Begin PBXFileReference section */
 		D38DABB3202CC0E200EBDFF1 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		D38DABB5202CC64800EBDFF1 /* commands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = commands.json; sourceTree = "<group>"; };
-		D38DABB7202D097500EBDFF1 /* lazybones.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lazybones.entitlements; sourceTree = "<group>"; };
 		D3B3D49F202B63CB00791D59 /* lazybones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lazybones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3B3D4A4202B63CB00791D59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +108,6 @@
 		D3B3D4A1202B63CB00791D59 /* lazybones */ = {
 			isa = PBXGroup;
 			children = (
-				D38DABB7202D097500EBDFF1 /* lazybones.entitlements */,
 				D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */,
 				D3B3D4A4202B63CB00791D59 /* ViewController.swift */,
 				D38DABB3202CC0E200EBDFF1 /* Commands.swift */,
