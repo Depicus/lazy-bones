@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D38DABB4202CC0E200EBDFF1 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DABB3202CC0E200EBDFF1 /* Commands.swift */; };
 		D38DABB6202CC64800EBDFF1 /* commands.json in Resources */ = {isa = PBXBuildFile; fileRef = D38DABB5202CC64800EBDFF1 /* commands.json */; };
+		D3AF125420324FBE004B8BBA /* ssdp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF125320324FBE004B8BBA /* ssdp.swift */; };
 		D3B3D4A3202B63CB00791D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */; };
 		D3B3D4A5202B63CB00791D59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3D4A4202B63CB00791D59 /* ViewController.swift */; };
 		D3B3D4A8202B63CB00791D59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3B3D4A6202B63CB00791D59 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		D38DABB3202CC0E200EBDFF1 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		D38DABB5202CC64800EBDFF1 /* commands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = commands.json; sourceTree = "<group>"; };
+		D3AF125320324FBE004B8BBA /* ssdp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ssdp.swift; sourceTree = "<group>"; };
 		D3B3D49F202B63CB00791D59 /* lazybones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lazybones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3B3D4A4202B63CB00791D59 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				D3B3D4BB202B655400791D59 /* wakeonlan.h */,
 				D3B3D4BC202B655400791D59 /* Info.plist */,
 				D3B3D4C6202B6FBE00791D59 /* wakeup.swift */,
+				D3AF125320324FBE004B8BBA /* ssdp.swift */,
 			);
 			path = wakeonlan;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B3D4C7202B6FBE00791D59 /* wakeup.swift in Sources */,
+				D3AF125420324FBE004B8BBA /* ssdp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
