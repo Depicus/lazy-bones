@@ -18,6 +18,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var frmMain: UIView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +44,7 @@ class ViewController: UIViewController {
             broadcastConnection.sendBroadcast(buf)
         }
         
-        
+
         
         
 
@@ -63,7 +67,7 @@ class ViewController: UIViewController {
         
         let wol = wakeup()
         if (wol.wakeonlan(mac: "AC:9B:0A:F6:7A:1D")) {
-            NSLog("hello we are true")
+            print("hello we are true")
         }
 
     }
@@ -76,7 +80,6 @@ class ViewController: UIViewController {
     @IBAction func btnPower(_ sender: UIButton) {
         sendCommand(command: "AAAAAQAAAAEAAAAVAw==")
     }
-    
     
     @IBAction func btnMute(_ sender: UIButton) {
         sendCommand(command: "AAAAAQAAAAEAAAAUAw==")
@@ -99,12 +102,12 @@ class ViewController: UIViewController {
         for item in numberarray {
             print("Found \(item) arrayofcommands would be \(arrayofcommands[item])")
             sendCommand(command: arrayofcommands[item])
-            usleep(20000) //will sleep for .02 seconds
+            usleep(80000) //will sleep for .08 seconds
         }
     }
     
     func sendCommand(command:String) {
-        let url = URL(string: "http://192.168.43.201/sony/IRCC")!
+        let url = URL(string: "http://\(ipaddress)/sony/IRCC")!
         var request = URLRequest(url: url)
         request.setValue("application/xml", forHTTPHeaderField: "Content-Type")
         request.setValue(pskcode, forHTTPHeaderField: "X-Auth-PSK")
