@@ -8,36 +8,64 @@
 
 import UIKit
 import wakeonlan
-//import UDPBroadcast
 
 class ViewController: UIViewController {
     
     let command = Commands()
     var broadcastConnection: UDPBroadcastConnection!
+    var pskcode = "0000"
+    var ipaddress: String!
+    
+    @IBOutlet var frmMain: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
-        broadcastConnection = UDPBroadcastConnection(port: 1900) { [unowned self] (ipAddress: String, port: Int, response: String?) -> Void in
-            print("Received from \(ipAddress):\(port):\n\n\(String(describing: response))")
-            //self.logView.text = log
+        if let ipaddress = UserDefaults.standard.value(forKey: "ipaddress") as? String
+        {
+            // we have an ip so no need to search
+            print("we got ipaddress \(ipaddress)")
+        } else {
+            broadcastConnection = UDPBroadcastConnection(port: 1900) { [unowned self] (ipAddress: String, port: Int, response: String?) -> Void in
+                print("Received from \(ipAddress):\(port):\n\n\(String(describing: response))")
+                UserDefaults.standard.setValue(ipAddress, forKey: "ipaddress")
+                self.ipaddress = ipAddress
+            }
+            let buf = "M-SEARCH * HTTP/1.1\r\n" +
+                "MAN: \"ssdp:discover\"\r\n" +
+                "HOST: 239.255.255.250:1900\r\n" +
+                "ST: urn:schemas-sony-com:service:X_Telepathy:1\r\n" +
+            "MX: 3\r\n\r\n"
+            broadcastConnection.sendBroadcast(buf)
         }
         
-        let buf = "M-SEARCH * HTTP/1.1\r\n" +
-            "MAN: \"ssdp:discover\"\r\n" +
-            "HOST: 239.255.255.250:1900\r\n" +
-            "ST: urn:schemas-sony-com:service:X_Telepathy:1\r\n" +
-        "MX: 3\r\n\r\n"
-        broadcastConnection.sendBroadcast(buf)
-        //createSocket()
+        
+        
         
 
+        
+        // set user defaults
+        
+        if let pskcode = UserDefaults.standard.value(forKey: "pskcode") as? String
+        {
+            print("we got psk code \(pskcode)")
+        } else {
+            pskcode = "0000"
+            UserDefaults.standard.setValue("0000", forKey: "pskcode")
+        }
+        
+        // loop buttons and round the endges
+        for case let button as UIButton in self.view.subviews {
+            button.layer.cornerRadius = 8
+            button.layer.masksToBounds = true
+        }
+        
         let wol = wakeup()
         if (wol.wakeonlan(mac: "AC:9B:0A:F6:7A:1D")) {
             NSLog("hello we are true")
         }
-        //sendSSDP()
-        //broadcastConnection.sendBroadcast("Mary had a little lamb")
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -79,7 +107,7 @@ class ViewController: UIViewController {
         let url = URL(string: "http://192.168.43.201/sony/IRCC")!
         var request = URLRequest(url: url)
         request.setValue("application/xml", forHTTPHeaderField: "Content-Type")
-        request.setValue("0000", forHTTPHeaderField: "X-Auth-PSK")
+        request.setValue(pskcode, forHTTPHeaderField: "X-Auth-PSK")
         request.setValue("\"urn:schemas-sony-com:service:IRCC:1#X_SendIRCC\"", forHTTPHeaderField: "SOAPACTION")
         request.setValue("TVSideview/2.0.1 CFNetwork/672.0.8Darwin/14.0.0", forHTTPHeaderField: "User-Agent")
         request.httpMethod = "POST"
