@@ -104,6 +104,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D3AFD3C92033A1130018057A /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				D37B33FF2033792400FE4139 /* bbc1.png */,
+				D37B33EF203369C500FE4139 /* E4.png */,
+				D37B33F12033707C00FE4139 /* Film4.png */,
+				D37B33FD203377D900FE4139 /* c4.png */,
+				D37B33F32033722200FE4139 /* skynews.png */,
+				D37B33F92033749900FE4139 /* itv2.png */,
+				D37B33FB203375D600FE4139 /* 5Star.png */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		D3B3D496202B63CB00791D59 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +140,7 @@
 		D3B3D4A1202B63CB00791D59 /* lazybones */ = {
 			isa = PBXGroup;
 			children = (
+				D3AFD3C92033A1130018057A /* assets */,
 				D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */,
 				D3B3D4A4202B63CB00791D59 /* ViewController.swift */,
 				D38DABB3202CC0E200EBDFF1 /* Commands.swift */,
@@ -135,13 +150,6 @@
 				D3B3D4AB202B63CB00791D59 /* LaunchScreen.storyboard */,
 				D3B3D4AE202B63CB00791D59 /* Info.plist */,
 				D38DABB5202CC64800EBDFF1 /* commands.json */,
-				D37B33FF2033792400FE4139 /* bbc1.png */,
-				D37B33EF203369C500FE4139 /* E4.png */,
-				D37B33F12033707C00FE4139 /* Film4.png */,
-				D37B33FD203377D900FE4139 /* c4.png */,
-				D37B33F32033722200FE4139 /* skynews.png */,
-				D37B33F92033749900FE4139 /* itv2.png */,
-				D37B33FB203375D600FE4139 /* 5Star.png */,
 			);
 			path = lazybones;
 			sourceTree = "<group>";
