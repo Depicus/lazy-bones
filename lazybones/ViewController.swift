@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     let command = Commands()
     var broadcastConnection: UDPBroadcastConnection!
     var pskcode = "0000"
-    var ipaddress: String!
+    var ipaddress = "192.168.0.1"
     
     @IBOutlet var frmMain: UIView!
     
@@ -26,9 +26,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        if let ipaddress = UserDefaults.standard.value(forKey: "ipaddress") as? String
+        if let ip = UserDefaults.standard.value(forKey: "ipaddress") as? String!
         {
             // we have an ip so no need to search
+            print("we got ipaddress \(ip)")
+            self.ipaddress = ip
             print("we got ipaddress \(ipaddress)")
         } else {
             broadcastConnection = UDPBroadcastConnection(port: 1900) { [unowned self] (ipAddress: String, port: Int, response: String?) -> Void in
@@ -44,18 +46,14 @@ class ViewController: UIViewController {
             broadcastConnection.sendBroadcast(buf)
         }
         
-
-        
-        
-
-        
         // set user defaults
         
-        if let pskcode = UserDefaults.standard.value(forKey: "pskcode") as? String
+        if let psk = UserDefaults.standard.value(forKey: "pskcode") as? String
         {
+            self.pskcode = psk
             print("we got psk code \(pskcode)")
         } else {
-            pskcode = "0000"
+            self.pskcode = "0000"
             UserDefaults.standard.setValue("0000", forKey: "pskcode")
         }
         
@@ -108,6 +106,7 @@ class ViewController: UIViewController {
     
     func sendCommand(command:String) {
         let url = URL(string: "http://\(ipaddress)/sony/IRCC")!
+        print("url is set to \(url)")
         var request = URLRequest(url: url)
         request.setValue("application/xml", forHTTPHeaderField: "Content-Type")
         request.setValue(pskcode, forHTTPHeaderField: "X-Auth-PSK")
