@@ -133,7 +133,7 @@ open class UDPBroadcastConnection {
             let reply = String(data: data, encoding: .utf8)
             
             
-            print("UDP connection received \(bytesRead) bytes from \(endpoint.host):\(endpoint.port) with \(reply)")
+            print("UDP connection received \(bytesRead) bytes from \(endpoint.host):\(endpoint.port) with \(String(describing: reply))")
             
             // Handle response
             self.handler?(endpoint.host, endpoint.port, reply)

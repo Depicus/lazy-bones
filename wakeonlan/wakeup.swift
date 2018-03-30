@@ -58,7 +58,7 @@ public class wakeup: NSObject {
         inet_aton("255.255.255.255", &addr_in.sin_addr);
         
         buf.withCString { cstr -> Void in
-            let sent = withUnsafePointer(to: &addr_in) {
+            _ = withUnsafePointer(to: &addr_in) {
                 
                 let broadcastMessageLength = buf.lengthOfBytes(using: .isoLatin1) //    Int(strlen(buf) + 1) //Int(strlen(cstr) + 1)
                 print("buffer size is set to \(broadcastMessageLength)")

@@ -26,11 +26,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        if let ip = UserDefaults.standard.value(forKey: "ipaddress") as? String!
+        if let ip = UserDefaults.standard.value(forKey: "ipaddress") as? String?
         {
             // we have an ip so no need to search
-            print("we got ipaddress \(ip)")
-            self.ipaddress = ip
+            print("we got ipaddress \(String(describing: ip))")
+            self.ipaddress = ip!
             print("we got ipaddress \(ipaddress)")
         } else {
             broadcastConnection = UDPBroadcastConnection(port: 1900) { [unowned self] (ipAddress: String, port: Int, response: String?) -> Void in
@@ -96,7 +96,7 @@ class ViewController: UIViewController {
         print(sender.tag)
         var arrayofcommands = [command.zero, command.one, command.two, command.three, command.four, command.five, command.six, command.seven, command.eight, command.nine]
         let channel = String(sender.tag)
-        let numberarray = channel.flatMap{Int(String($0))}
+        let numberarray = channel.compactMap{Int(String($0))}
         for item in numberarray {
             print("Found \(item) arrayofcommands would be \(arrayofcommands[item])")
             sendCommand(command: arrayofcommands[item])
