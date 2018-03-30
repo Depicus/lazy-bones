@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D36634D8206EB4C9009A8A17 /* c5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D36634D7206EB4C9009A8A17 /* c5.jpg */; };
 		D36634DA206EB5D0009A8A17 /* bbc2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D36634D9206EB5D0009A8A17 /* bbc2.jpg */; };
-		D36634DE206EBC41009A8A17 /* girls.png in Resources */ = {isa = PBXBuildFile; fileRef = D36634DD206EBC3F009A8A17 /* girls.png */; };
+		D36634E0206EBE2C009A8A17 /* girls.png in Resources */ = {isa = PBXBuildFile; fileRef = D36634DF206EBE2C009A8A17 /* girls.png */; };
 		D37B33F0203369C500FE4139 /* E4.png in Resources */ = {isa = PBXBuildFile; fileRef = D37B33EF203369C500FE4139 /* E4.png */; };
 		D37B33F22033707C00FE4139 /* Film4.png in Resources */ = {isa = PBXBuildFile; fileRef = D37B33F12033707C00FE4139 /* Film4.png */; };
 		D37B33F42033722200FE4139 /* skynews.png in Resources */ = {isa = PBXBuildFile; fileRef = D37B33F32033722200FE4139 /* skynews.png */; };
@@ -59,7 +59,7 @@
 /* Begin PBXFileReference section */
 		D36634D7206EB4C9009A8A17 /* c5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c5.jpg; sourceTree = "<group>"; };
 		D36634D9206EB5D0009A8A17 /* bbc2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bbc2.jpg; sourceTree = "<group>"; };
-		D36634DD206EBC3F009A8A17 /* girls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = girls.png; path = ../../../../Desktop/girls.png; sourceTree = "<group>"; };
+		D36634DF206EBE2C009A8A17 /* girls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girls.png; sourceTree = "<group>"; };
 		D37B33EF203369C500FE4139 /* E4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = E4.png; sourceTree = "<group>"; };
 		D37B33F12033707C00FE4139 /* Film4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Film4.png; sourceTree = "<group>"; };
 		D37B33F32033722200FE4139 /* skynews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skynews.png; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		D3AFD3C92033A1130018057A /* assets */ = {
 			isa = PBXGroup;
 			children = (
-				D36634DD206EBC3F009A8A17 /* girls.png */,
+				D36634DF206EBE2C009A8A17 /* girls.png */,
 				D37B33FF2033792400FE4139 /* bbc1.png */,
 				D36634D9206EB5D0009A8A17 /* bbc2.jpg */,
 				D37B33EF203369C500FE4139 /* E4.png */,
@@ -288,7 +288,7 @@
 				D3B3D4A8202B63CB00791D59 /* Main.storyboard in Resources */,
 				D37B33F22033707C00FE4139 /* Film4.png in Resources */,
 				D38DABB6202CC64800EBDFF1 /* commands.json in Resources */,
-				D36634DE206EBC41009A8A17 /* girls.png in Resources */,
+				D36634E0206EBE2C009A8A17 /* girls.png in Resources */,
 				D37B34002033792400FE4139 /* bbc1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
