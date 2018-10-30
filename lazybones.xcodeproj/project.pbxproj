@@ -20,6 +20,7 @@
 		D37B3402203384C700FE4139 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D37B3401203384C700FE4139 /* Settings.bundle */; };
 		D38DABB4202CC0E200EBDFF1 /* Commands.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38DABB3202CC0E200EBDFF1 /* Commands.swift */; };
 		D38DABB6202CC64800EBDFF1 /* commands.json in Resources */ = {isa = PBXBuildFile; fileRef = D38DABB5202CC64800EBDFF1 /* commands.json */; };
+		D39C4C86218883B600AFDB8F /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D39C4C85218883B600AFDB8F /* Intents.framework */; };
 		D3AF125420324FBE004B8BBA /* ssdp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AF125320324FBE004B8BBA /* ssdp.swift */; };
 		D3B3D4A3202B63CB00791D59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */; };
 		D3B3D4A5202B63CB00791D59 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B3D4A4202B63CB00791D59 /* ViewController.swift */; };
@@ -70,6 +71,8 @@
 		D37B3401203384C700FE4139 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		D38DABB3202CC0E200EBDFF1 /* Commands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commands.swift; sourceTree = "<group>"; };
 		D38DABB5202CC64800EBDFF1 /* commands.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = commands.json; sourceTree = "<group>"; };
+		D39C4C842188836700AFDB8F /* lazybones.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lazybones.entitlements; sourceTree = "<group>"; };
+		D39C4C85218883B600AFDB8F /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
 		D3AF125320324FBE004B8BBA /* ssdp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ssdp.swift; sourceTree = "<group>"; };
 		D3B3D49F202B63CB00791D59 /* lazybones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lazybones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39C4C86218883B600AFDB8F /* Intents.framework in Frameworks */,
 				D3B3D4C0202B655400791D59 /* wakeonlan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +110,7 @@
 		D35F97E2202BB3B300779F51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D39C4C85218883B600AFDB8F /* Intents.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 		D3B3D4A1202B63CB00791D59 /* lazybones */ = {
 			isa = PBXGroup;
 			children = (
+				D39C4C842188836700AFDB8F /* lazybones.entitlements */,
 				D3AFD3C92033A1130018057A /* assets */,
 				D3B3D4A2202B63CB00791D59 /* AppDelegate.swift */,
 				D3B3D4A4202B63CB00791D59 /* ViewController.swift */,
@@ -237,16 +243,17 @@
 				TargetAttributes = {
 					D3B3D49E202B63CB00791D59 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Siri = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
 					D3B3D4B8202B655400791D59 = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 0920;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -468,13 +475,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = lazybones/lazybones.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8KV28BE94J;
 				INFOPLIST_FILE = lazybones/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.depicus.lazybones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -484,13 +492,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = lazybones/lazybones.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8KV28BE94J;
 				INFOPLIST_FILE = lazybones/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.depicus.lazybones;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -514,7 +523,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -539,7 +548,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.depicus.wakeonlan;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

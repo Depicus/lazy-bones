@@ -70,6 +70,22 @@ class ViewController: UIViewController {
 
     }
     
+    func setupIntents() {
+        
+        if #available(iOS 12.0, *) {
+            let activity = NSUserActivity(activityType: "com.depicus.lazybones.bbcone") // 1
+            activity.title = "Change to BBC One" // 2
+            activity.userInfo = ["speech" : "bbcone"] // 3
+            activity.isEligibleForSearch = true // 4
+            activity.isEligibleForPrediction = true  //5
+            activity.persistentIdentifier = NSUserActivityPersistentIdentifier("com.depicus.lazybones.bbcone") // 6
+            view.userActivity = activity // 7
+            activity.becomeCurrent() // 8
+        } else {
+            // Fallback on earlier versions
+        } //
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -151,7 +167,7 @@ class ViewController: UIViewController {
         var addr_in = sockaddr_in(sin_len: __uint8_t(MemoryLayout<sockaddr_in>.size), sin_family: sa_family_t(AF_INET), sin_port: htons(value: 1900), sin_addr: INADDR_ANY, sin_zero: (0,0,0,0, 0,0,0,0))
         inet_aton("239.255.255.250", &addr_in.sin_addr);
         
-        buf.withCString { cstr -> Void in
+        /*buf.withCString { cstr -> Void in
             _ = withUnsafePointer(to: &addr_in) {
                 
                 let broadcastMessageLength = buf.lengthOfBytes(using: .isoLatin1)
@@ -165,7 +181,7 @@ class ViewController: UIViewController {
                 // Send the message cstr
                 sendto(fd, buf.cString(using: .isoLatin1), broadcastMessageLength, 0, p, socklen_t(addr_in.sin_len))
             }
-        }
+        }*/
     }
     
     private func htons(value: CUnsignedShort) -> CUnsignedShort {

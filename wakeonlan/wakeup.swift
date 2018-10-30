@@ -57,7 +57,12 @@ public class wakeup: NSObject {
         var addr_in = sockaddr_in(sin_len: __uint8_t(MemoryLayout<sockaddr_in>.size), sin_family: sa_family_t(AF_INET), sin_port: htons(value: 4343), sin_addr: INADDR_ANY, sin_zero: (0,0,0,0, 0,0,0,0))
         inet_aton("255.255.255.255", &addr_in.sin_addr);
         
-        buf.withCString { cstr -> Void in
+        /*
+         withUnsafeMutablePointer(to: &nc) {
+         dgetrf_($0, $0, &matrix, $0, &ipiv, &info)
+         }
+ */
+        /*buf.withCString { cstr -> Void in
             _ = withUnsafePointer(to: &addr_in) {
                 
                 let broadcastMessageLength = buf.lengthOfBytes(using: .isoLatin1) //    Int(strlen(buf) + 1) //Int(strlen(cstr) + 1)
@@ -66,12 +71,12 @@ public class wakeup: NSObject {
                 var udpflag: UInt32 = 1;
                 if setsockopt(fd, SOL_SOCKET, SO_BROADCAST, &udpflag, socklen_t(MemoryLayout.size(ofValue: udpflag))) == -1
                 {
-                    print("Failed to set socket \(strerror(errno))")
+                    print("Failed to set socket \(String(describing: strerror(errno)))")
                 }
                 // Send the message cstr
                 sendto(fd, buf.cString(using: .isoLatin1), broadcastMessageLength, 0, p, socklen_t(addr_in.sin_len))
             }
-        }
+        }*/
         return true
     }
     
