@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>NSUserActivityTypes</key>
-	<dict>
-		<key>New item</key>
+	<array>
 		<string>com.depicus.lazybones.bbcone</string>
-	</dict>
+		<string>com.depicus.lazybones.bbctwo</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>

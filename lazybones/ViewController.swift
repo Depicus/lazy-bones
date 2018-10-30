@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 import wakeonlan
 
 class ViewController: UIViewController {
@@ -67,12 +68,14 @@ class ViewController: UIViewController {
         if (wol.wakeonlan(mac: "AC:9B:0A:F6:7A:1D")) {
             print("hello we are true")
         }
+        
+        setupIntents()
 
     }
     
     func setupIntents() {
-        
         if #available(iOS 12.0, *) {
+            print("set up intent")
             let activity = NSUserActivity(activityType: "com.depicus.lazybones.bbcone") // 1
             activity.title = "Change to BBC One" // 2
             activity.userInfo = ["speech" : "bbcone"] // 3
@@ -84,6 +87,13 @@ class ViewController: UIViewController {
         } else {
             // Fallback on earlier versions
         } //
+    }
+    
+    public func bbcone() {
+        //let alert = UIAlertController(title: "Hi There!", message: "Hey there! Glad to see you got this working!", preferredStyle: UIAlertController.Style.alert)
+        //alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        //self.present(alert, animated: true, completion: nil)
+        sendCommand(command:command.one)
     }
     
     override func didReceiveMemoryWarning() {
