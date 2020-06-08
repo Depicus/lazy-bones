@@ -90,9 +90,6 @@ class ViewController: UIViewController {
     }
     
     public func bbcone() {
-        //let alert = UIAlertController(title: "Hi There!", message: "Hey there! Glad to see you got this working!", preferredStyle: UIAlertController.Style.alert)
-        //alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        //self.present(alert, animated: true, completion: nil)
         sendCommand(command:command.one)
     }
     
